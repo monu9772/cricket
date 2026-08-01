@@ -1,13 +1,44 @@
-// Join Button Tracking
+// Telegram Join Button Tracking
 
-const joinBtn = document.querySelector(".join-btn");
+document.addEventListener("DOMContentLoaded", function () {
 
-joinBtn.addEventListener("click", function () {
+  const buttons = document.querySelectorAll(".join-btn");
 
-  fbq('track', 'Lead');
+  buttons.forEach(function(btn){
 
-  setTimeout(function () {
-    window.location.href = "https://t.me/+9qy16u2uzVgyYTU1";
-  }, 200);
+    btn.addEventListener("click", function(){
+
+      if (typeof fbq !== "undefined") {
+        fbq("track", "Lead");
+      }
+
+    });
+
+  });
 
 });
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+
+  });
+});
+
+// Button Animation
+
+setInterval(() => {
+
+  document.querySelectorAll(".join-btn").forEach(btn => {
+
+    btn.classList.toggle("pulse");
+
+  });
+
+},1500);
