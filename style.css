@@ -220,3 +220,109 @@ width:100%;
 }
 
 }
+.cta{
+text-align:center;
+padding:70px 20px;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+color:#fff;
+}
+
+.cta p{
+font-size:18px;
+color:#d9d9d9;
+max-width:700px;
+margin:0 auto 30px;
+line-height:1.7;
+}
+
+footer{
+margin-top:60px;
+padding:30px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.12);
+color:#bfbfbf;
+font-size:14px;
+}
+
+footer p{
+margin:8px 0;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.join-btn{
+
+animation:pulse 2s infinite;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+gap:15px;
+
+}
+
+.hero-box{
+
+padding:30px 20px;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+.badge{
+
+font-size:13px;
+
+}
+
+.join-btn{
+
+width:100%;
+
+}
+
+}
