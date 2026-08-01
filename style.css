@@ -2,86 +2,220 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0b1220;
-background-image:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=80");
+background:#08131f;
+background-image:
+linear-gradient(rgba(3,12,24,.82),rgba(3,12,24,.88)),
+url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:#fff;
+overflow-x:hidden;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.25);
+z-index:-1;
+}
+
+header{
 display:flex;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-min-height:100vh;
 padding:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#00ff88;
+}
+
+.badge{
+background:#ff9800;
+padding:10px 18px;
+border-radius:40px;
+font-weight:bold;
+color:#111;
 }
 
 .hero{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:80vh;
+padding:30px;
+}
+
+.hero-box{
 width:100%;
-max-width:420px;
-background:rgba(15,23,42,.88);
-backdrop-filter:blur(10px);
-border-radius:20px;
-padding:35px 25px;
+max-width:760px;
 text-align:center;
-border:1px solid rgba(255,255,255,.1);
-box-shadow:0 10px 35px rgba(0,0,0,.45);
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:25px;
+padding:45px 30px;
+box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
 
 .hero h1{
-font-size:34px;
-color:#00ff84;
-margin-bottom:15px;
-}
-
-.tagline{
-font-size:18px;
-font-weight:bold;
-margin-bottom:15px;
-color:#ffd54f;
-}
-
-.hero p{
-line-height:1.7;
+font-size:52px;
+line-height:1.2;
 margin-bottom:20px;
 }
 
+.hero p{
+font-size:19px;
+opacity:.92;
+margin-bottom:35px;
+}
+
+.stats{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.card{
+background:rgba(255,255,255,.09);
+padding:20px;
+border-radius:18px;
+min-width:150px;
+}
+
+.card h2{
+font-size:34px;
+color:#00ff88;
+margin-bottom:10px;
+}
+
+.card span{
+font-size:15px;
+color:#ddd;
+}
 .join-btn{
 display:inline-block;
-background:#00c853;
+padding:18px 45px;
+background:linear-gradient(45deg,#00c853,#00e676);
 color:#fff;
 text-decoration:none;
-padding:16px 40px;
-border-radius:50px;
 font-size:20px;
-font-weight:bold;
-transition:.3s;
-box-shadow:0 0 20px rgba(0,200,83,.5);
+font-weight:700;
+border-radius:60px;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,255,136,.45);
 }
 
 .join-btn:hover{
-transform:scale(1.05);
-background:#00e676;
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 18px 40px rgba(0,255,136,.65);
 }
 
-.domain{
+.big{
+margin-top:25px;
+}
+
+.secure{
 margin-top:25px;
 font-size:15px;
-color:#ddd;
-word-break:break-word;
+color:#dcdcdc;
 }
 
-@media(max-width:480px){
+.features{
+max-width:1200px;
+margin:70px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:20px;
+}
+
+.feature-box{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.12);
+transition:.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-8px);
+}
+
+.feature-box h2{
+color:#00ff88;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.feature-box p{
+line-height:1.7;
+color:#ddd;
+}
+
+.cta{
+text-align:center;
+padding:70px 20px;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:18px;
+max-width:700px;
+margin:0 auto 30px;
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:35px 20px;
+border-top:1px solid rgba(255,255,255,.12);
+color:#aaa;
+}
+
+@media(max-width:768px){
 
 .hero h1{
-font-size:28px;
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.logo{
+font-size:22px;
+}
+
+.badge{
+font-size:12px;
+padding:8px 12px;
 }
 
 .join-btn{
+width:100%;
+}
+
+.card{
 width:100%;
 }
 
